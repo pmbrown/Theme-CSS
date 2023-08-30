@@ -1,0 +1,166 @@
+// Cards basic and links
+
+.card-basic, .card-link {
+  --card-pt: .75rem;
+  --card-pb: 1rem;
+  --card-pi: 1rem;
+  --card-bd: 1px solid hsla(var(--surf-1) / .65);
+  --card-bg: hsla(var(--surf-1) / .35);
+  --card-fig: -1.031rem;
+  position: relative;
+  max-width: var(--card-max-width); 
+  padding-block-start: var(--card-pt);
+  padding-block-end: var(--card-pb);
+  padding-inline: var(--card-pi);
+  border: var(--card-bd);
+  background-color: var(--card-bg);
+}
+
+:where(.card-basic, .card-link) figure {
+  margin-inline: var(--card-fig);
+}
+
+:where(.card-basic, .card-link) :last-child {
+  --mb: 0;
+}
+
+.card-link a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.card-link :focus-visible {
+  outline: none;
+}
+
+.card-link:is(:focus-within, :hover) {
+  background-color: hsla(var(--surf-1) / .65);
+  cursor: pointer;
+}
+
+.card-link:focus-within {
+  outline: .096rem solid hsl(var(--surf-3));
+}
+
+// Cards with headers
+
+.card, .card-sm {
+  --card-txt: hsl(var(--text));
+  --card-title-txt: hsl(var(--text));
+  --card-title-bg: hsl(var(--surf-2));
+  --card-title-block: .5rem;
+  --card-title-header-block: .75rem;  
+  --card-body-block-start: .75rem;
+  --card-body-block-end: .9rem; 
+  --card-border-color: hsl(var(--surf-2));
+  --card-border-width: 1px;
+  --card-border-radius: .125em;
+  --card-inline: 1rem;
+  --card-width: 100%;
+  color: var(--card-txt);
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  background-color: var(--card-bg);
+}
+
+.card-sm {
+  --card-inline: .75rem;
+  --card-title-header-block: .65rem;  
+  --card-body-block-start: .5rem;
+  --card-body-block-end: .75rem;
+}
+
+.card-sm * {
+  font-size: var(--sml);
+}
+
+.card-sm *:is(p, ul, ol, dl):not(:last-child) { 
+  --mb: .5rem;
+}
+
+.card-title {
+--ico-color: var(--card-title-txt);
+  color: var(--card-title-txt);
+  display: block;
+  padding-block: var(--card-title-block);
+  padding-inline: var(--card-inline);
+  border-start-start-radius: var(--card-border-radius);
+  border-start-end-radius: var(--card-border-radius);
+  background-color: var(--card-title-bg);
+}
+
+.card-title:is(h1, h2, h3, h4, h5, h6, p) {
+  --mb: 0;
+}
+
+.card-title:is(h1, h2, h3, h4, h5, h6) {
+  padding-block: var(--card-title-header-block);
+}
+
+.card-body {
+  padding-block-start: var(--card-body-block-start);
+  padding-block-end: var(--card-body-block-end);
+  padding-inline: var(--card-inline);
+  border: var(--card-border-width) solid var(--card-border-color);
+  border-block-start: none;
+  border-end-start-radius: var(--card-border-radius);
+  border-end-end-radius: var(--card-border-radius);
+}
+
+.card-body :last-child {
+  --mb: 0;
+}
+
+.card-list {
+  --pl: 1rem;
+}
+
+// Card colors
+
+.card-blue {
+  --card-title-txt: hsl(var(--white));
+  --card-title-bg: hsl(var(--blue));
+  --card-border-color: var(--card-title-bg);
+  --link-hover-bg: hsla(var(--blue) / .85);
+}
+
+.card-red {
+  --card-title-txt: hsl(var(--white));
+  --card-title-bg: hsl(var(--red));
+  --card-border-color: var(--card-title-bg);
+  --hover-bg: hsla(var(--red) / .5);
+  --link-hover-bg: hsla(var(--red) / .85);
+}
+
+.card-green {
+  --card-title-txt: hsl(var(--white));
+  --card-title-bg: hsl(var(--green));
+  --card-border-color: var(--card-title-bg);
+  --link-hover-bg: hsla(var(--green) / .85);
+}
+
+.card-orange {
+  --card-title-txt: hsl(var(--black));
+  --card-title-bg: hsl(var(--orange));
+  --card-border-color: var(--card-title-bg);
+  --link-hover-bg: hsla(var(--orange) / .85);
+}
+
+.card-dark {
+  --card-title-txt: hsl(var(--white));
+  --card-title-bg: hsl(var(--surf-2-dark));
+  --card-border-color: var(--card-title-bg);
+  --link-hover-bg: hsl(var(--surf-2-dark));
+}
+
+.card-light {
+  --card-title-txt: hsl(var(--black));
+  --card-title-bg: hsl(var(--surf-2-light));
+  --card-border-color: var(--card-title-bg);
+  --link-hover-bg: hsl(var(--surf-2-light));
+}

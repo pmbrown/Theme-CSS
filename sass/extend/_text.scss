@@ -1,0 +1,118 @@
+//  ------------------------------------------------------------
+//  Text
+//  ------------------------------------------------------------
+
+:where(.body, .lg, .sm, .sml, .xs, .h1, .h2, .h3, .h4, .h5, .h6) {
+  font-size: var(--fs);
+  font-weight: var(--fw);
+  line-height: var(--lh);
+}
+
+.body {
+  --fs: var(--body);
+}
+
+.lg {
+  --fs: var(--lg);
+}
+
+.sm {
+  --fs: var(--sm);
+}
+
+.sml {
+  --fs: var(--sml);
+}
+
+.xs {
+  --fs: var(--xs);
+}
+
+.h1 {
+  --fs: var(--h1);
+}
+
+.h2 {
+  --fs: var(--h2);
+}
+
+.h3 {
+  --fs: var(--h3);
+}
+
+.h4 {
+  --fs: var(--h4);
+}
+
+.h5 {
+  --fs: var(--h5);
+}
+
+.h6 {
+  --fs: var(--h6);
+}
+
+.lead {
+  font-size: var(--h5);
+  line-height: 1.55;
+}
+
+.fw-normal {
+  --fw: normal;
+  font-weight: var(--fw);
+}
+
+.bold {
+  --fw: bold;
+  font-weight: var(--fw);
+}
+
+.nolink {
+  text-decoration: none;
+}
+
+.nolink:is(:hover, :focus) {
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: .1175em;
+}
+
+.txt-c {
+  text-align: center;
+}
+
+.txt-r {
+  text-align: right;
+}
+
+.nolist {
+  --pl: 0;
+}
+
+.nolist li::marker {
+  display: none; 
+  content: ""; 
+}
+
+// Skip to main content
+.skip:not(:focus):not(:focus-within) {
+  position: absolute;
+  width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	white-space: nowrap;
+}
+
+.skip {
+  position: relative;
+  display: block;
+  margin-block-start: .5rem;
+  padding-inline: .5rem;
+  z-index: 10000;
+}
+
+.skip:hover {
+  text-decoration: underline;
+}

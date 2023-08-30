@@ -1,0 +1,70 @@
+// Border utilities
+
+:where(.bd, .bd-t, .bd-b, .bd-l, .bd-r, .bd-block, .bd-inline, .bd-child *) {
+  --bd-col: hsl(var(--surf-2));
+}
+
+:where(.bd) {
+  border: 1px solid var(--bd-col);
+  border-radius: var(--bd-radius);
+}
+
+:where(.bd-t) {
+  border-block-start: 1px solid var(--bd-col);
+}
+
+:where(.bd-b) {
+  border-block-end: 1px solid var(--bd-col);
+}
+
+:where(.bd-block) {
+  border-block: 1px solid var(--bd-col);
+}
+
+:where(.bd-l) {
+  border-inline-start: 1px solid var(--bd-col);
+}
+
+:where(.bd-r) {
+  border-inline-end: 1px solid var(--bd-col);
+}
+
+:where(.bd-inline) {
+  border-inline: 1px solid var(--bd-col);
+}
+
+:where(.bd-child *) {
+  border: 1px solid var(--bd-col);
+}
+
+.bd-blue {
+  --bd-col: hsl(var(--blue));
+}
+
+.bd-red {
+  --bd-col: hsl(var(--red));
+}
+
+.bd-green {
+  --bd-col: hsl(var(--green));
+}
+
+.bd-orange {
+  --bd-col: hsl(var(--orange));
+}
+
+.radius-xs {
+  --bd-radius: .125em;
+}
+
+.radius-sm {
+  --bd-radius: .25em;
+}
+
+.radius-md {
+  --bd-radius: .5em;
+}
+
+.radius-lg {
+  --bd-radius: .75em;
+}

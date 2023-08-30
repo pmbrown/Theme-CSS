@@ -1,0 +1,133 @@
+// Dialog element
+
+dialog {
+  --dialog-txt: hsl(var(--text));
+  --dialog-bg: hsl(var(--body-bg));
+  --dialog-header-txt: hsl(var(--text));
+  --dialog-header-bg: hsl(var(--surf-1));
+  --dialog-border-color: hsl(var(--surf-2));
+  --dialog-border-width: 1px;
+  --dialog-border-radius: .125rem; 
+  --dialog-top: 1rem;
+  --dialog-width: calc((100% - 6px) - 2em);
+  --dialog-max-width: 30rem;
+  color: var(--dialog-txt);
+  margin: auto;
+  margin-block-start: var(--dialog-top);  
+  padding: 0;
+  width: var(--dialog-width);
+  max-width: var(--dialog-max-width); 
+  border-width: var(--dialog-border-width);
+  border-color: var(--dialog-border-color);
+  border-radius: var(--dialog-border-radius); 
+  background-color: var(--dialog-bg); 
+}
+
+dialog header {
+  --ico-color: var(--dialog-header-txt); 
+  color: var(--dialog-header-txt);
+  position: sticky;
+  align-self: start;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-block-end: var(--dialog-border-width) solid var(--dialog-border-color);
+  background-color: var(--dialog-header-bg);
+  padding-block: .5rem;
+  padding-inline-start: 1rem;
+  padding-inline-end: .5rem;
+}
+
+dialog header * {
+  --ico: var(--dialog-header-txt); 
+  color: var(--dialog-header-txt);
+  padding-block: var(--dialog-header-pb);
+}
+
+dialog header *:is(h1, h2, h3, h4, h5, h6, p) {
+  --mb: 0;
+}
+
+dialog header *:is(h1, h2, h3, h4, h5, h6) {
+  --dialog-header-pb: .25rem;  
+}
+
+// Header close button
+dialog header button {
+  --btn-bg: transparent;
+  --btn-hover: transparent;
+  border: none;
+  margin-inline-start: 1rem;
+}
+
+dialog header button:is(:focus, :active) {
+  outline: none;
+  box-shadow: none;
+}
+
+dialog header [data-close]:before {
+//  @extend %svg-mask;
+  --svg: var(--close);
+}
+
+// Internal wrapper
+.dialog-body {
+  --dialog-body-pb: .75rem;
+  --dialog-body-pi: 1rem;
+  padding-block: var(--dialog-body-pb);
+  padding-inline: var(--dialog-body-pi);
+}
+
+.dialog-body :last-child {
+  --mb: 0;
+}
+
+// Backdrop
+:where(html) {
+  ::backdrop {
+    background: hsla(215 15% 94.5% / .9);
+  }
+}
+
+:where([data-prefers-dark=true]) {
+  ::backdrop {
+    background: hsla(215 15% 16% / .9);
+  }
+}
+
+.dialog-blue {
+  --dialog-header-txt: hsl(var(--white));
+  --dialog-header-bg: hsl(var(--blue));
+  --dialog-border-color: hsl(var(--blue));
+}
+
+.dialog-red {
+  --dialog-header-txt: hsl(var(--white));
+  --dialog-header-bg: hsl(var(--red));
+  --dialog-border-color: hsl(var(--red));
+}
+
+.dialog-green {
+  --dialog-header-txt: hsl(var(--white));
+  --dialog-header-bg: hsl(var(--green));
+  --dialog-border-color: hsl(var(--green));
+}
+
+.dialog-orange {
+  --dialog-header-txt: hsl(var(--black));
+  --dialog-header-bg: hsl(var(--orange));
+  --dialog-border-color: hsl(var(--orange));
+}
+
+.dialog-dark {
+  --dialog-header-txt: hsl(var(--white));
+  --dialog-header-bg: hsl(var(--surf-3-dark));
+  --dialog-border-color: hsl(var(--surf-3-dark));
+}
+
+.dialog-light {
+  --dialog-header-txt: hsl(var(--black));
+  --dialog-header-bg: hsl(var(--surf-1-light));
+  --dialog-border-color: hsl(var(--surf-1-light));
+}

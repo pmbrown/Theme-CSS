@@ -1,0 +1,205 @@
+//  ------------------------------------------------------------
+//  Grid variables and utilities
+//  ------------------------------------------------------------
+
+// Fraction width maps
+
+$fraction-grid: (
+  "g-1": 100%,
+  "g-2": repeat(2, 1fr),
+  "g-3": repeat(3, 1fr),
+  "g-4": repeat(4, 1fr),
+  "g-5": repeat(5, 1fr),
+  "g-6": repeat(6, 1fr),
+  "g-7": repeat(7, 1fr),
+  "g-8": repeat(8, 1fr),
+  "g-9": repeat(9, 1fr),
+  "g-10": repeat(10, 1fr),
+) !default;
+
+// Gap maps
+
+$gap-s0: 0;
+$gap-s1: .25rem;
+$gap-s2: .5rem;
+$gap-s3: 1rem;
+
+$gaps: (
+  "gap-0": $gap-s0,
+  "gap-1": $gap-s1,
+  "gap-2": $gap-s2,
+  "gap-3": $gap-s3,
+) !default;
+
+$gaps-col: (
+  "gap-c-0": $gap-s0,
+  "gap-c-1": $gap-s1,
+  "gap-c-2": $gap-s2,
+  "gap-c-3": $gap-s3,
+) !default;
+
+$gaps-row: (
+  "gap-r-0": $gap-s0,
+  "gap-r-1": $gap-s1,
+  "gap-r-2": $gap-s2,
+  "gap-r-3": $gap-s3,
+) !default;
+
+:where(html) {  
+  @each $fraction-grid, $value in $fraction-grid {
+    --#{$fraction-grid}: #{$value};
+  }
+}
+
+.grid, .grid-inline, .gallery {
+  grid-template-columns: var(--gtc);
+  margin-block-end: var(--mb);
+}
+
+.grid, .gallery {
+  display: grid;
+}
+
+.grid-inline {
+  display: inline-grid;
+}
+
+.gallery {
+  --aspect-ratio: 16 / 9;
+  --mb: 1rem;
+}
+
+.gallery img {
+  object-fit: cover;
+  aspect-ratio: var(--aspect-ratio);
+  height: 100%;
+}
+
+// Grid column and gap modifier utilities
+
+// Base size
+@each $fraction-grid, $value in $fraction-grid {
+.#{$fraction-grid} {
+  --gtc: var(--#{$fraction-grid});        
+  }
+}
+
+@each $gaps, $value in $gaps {
+.#{$gaps} {
+  gap: #{$value};        
+  }
+}
+
+@each $gaps-col, $value in $gaps-col {
+.#{$gaps-col} {
+  column-gap: #{$value};        
+  }
+}
+
+@each $gaps-row, $value in $gaps-row {
+.#{$gaps-row} {
+  row-gap: #{$value};        
+  }
+}
+
+// Responsive sizes
+
+// 1400
+@media screen and (max-width: 1401px) {
+  @each $fraction-grid, $value in $fraction-grid {
+  .#{$fraction-grid}-lg {
+    --gtc: var(--#{$fraction-grid});        
+    }
+  }
+  @each $gaps, $value in $gaps {
+  .#{$gaps}-lg {
+    gap: #{$value};        
+    }
+  }
+  @each $gaps-col, $value in $gaps-col {
+  .#{$gaps-col}-lg {
+    column-gap: #{$value};        
+    }
+  }
+  
+  @each $gaps-row, $value in $gaps-row {
+  .#{$gaps-row}-lg {
+    row-gap: #{$value};        
+    }
+  }
+}
+
+// 1024
+@media screen and (max-width: 1025px) { 
+  @each $fraction-grid, $value in $fraction-grid {
+  .#{$fraction-grid}-md {  
+    --gtc: var(--#{$fraction-grid});        
+    }
+  }
+  @each $gaps, $value in $gaps {
+  .#{$gaps}-md {
+    gap: #{$value};        
+    }
+  }
+  @each $gaps-col, $value in $gaps-col {
+  .#{$gaps-col}-md {
+    column-gap: #{$value};        
+    }
+  }
+  
+  @each $gaps-row, $value in $gaps-row {
+  .#{$gaps-row}-md {
+    row-gap: #{$value};        
+    }
+  }
+}
+
+// 800
+@media screen and (max-width: 801px) {  
+  @each $fraction-grid, $value in $fraction-grid {
+  .#{$fraction-grid}-sm {  
+    --gtc: var(--#{$fraction-grid});        
+    }
+  }
+  @each $gaps, $value in $gaps {
+  .#{$gaps}-sm {
+    gap: #{$value};        
+    }
+  }
+  @each $gaps-col, $value in $gaps-col {
+  .#{$gaps-col}-sm {
+    column-gap: #{$value};        
+    }
+  }
+  
+  @each $gaps-row, $value in $gaps-row {
+  .#{$gaps-row}-sm {
+    row-gap: #{$value};        
+    }
+  }
+}
+
+// 480
+@media screen and (max-width: 480px) {
+  @each $fraction-grid, $value in $fraction-grid {
+  .#{$fraction-grid}-xs {  
+    --gtc: var(--#{$fraction-grid});        
+    }
+  }
+  @each $gaps, $value in $gaps {
+  .#{$gaps}-xs {
+    gap: #{$value};        
+    }
+  }
+  @each $gaps-col, $value in $gaps-col {
+  .#{$gaps-col}-xs {
+    column-gap: #{$value};        
+    }
+  }
+  
+  @each $gaps-row, $value in $gaps-row {
+  .#{$gaps-row}-xs {
+    row-gap: #{$value};        
+    }
+  }
+}

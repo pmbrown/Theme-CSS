@@ -1,0 +1,90 @@
+// Background color utilities
+
+:where(.bg-blue, .bg-red, .bg-green, .bg-orange, .bg-theme, .surf-1-light, .surf-2-light, .surf-3-light, .surf-1-dark, .surf-2-dark, .surf-3-dark) {
+  --color: var(--bg-txt);
+  --ico: var(--bg-txt);
+  color: var(--color);
+  background-color: var(--bg);
+}
+
+.body-bg {
+  background-color: hsl(var(--body-bg));
+}
+
+.surf-1 {
+  background-color: hsl(var(--surf-1));
+}
+
+.surf-2 {
+  background-color: hsl(var(--surf-2));
+}
+
+.surf-3 {
+  background-color: hsl(var(--surf-3));
+}
+
+.surf-1-light {
+  --bg: hsl(var(--surf-1-light));
+  --bg-txt: hsl(var(--black));
+  --bd-col: hsl(var(--surf-1-light));
+}
+
+.surf-2-light {
+  --bg: hsl(var(--surf-2-light));
+  --bg-txt: hsl(var(--black));
+  --bd-col: hsl(var(--surf-2-light));
+}
+
+.surf-3-light {
+  --bg: hsl(var(--surf-3-light));
+  --bg-txt: hsl(var(--black));
+  --bd-col: hsl(var(--surf-3-light));
+}
+
+.surf-1-dark {
+  --bg: hsl(var(--surf-1-dark));
+  --bg-txt: hsl(var(--white));
+  --bd-col: hsl(var(--surf-1-dark));
+}
+
+.surf-2-dark {
+  --bg: hsl(var(--surf-2-dark));
+  --bg-txt: hsl(var(--white));
+  --bd-col: hsl(var(--surf-2-dark));
+}
+
+.surf-3-dark {
+  --bg: hsl(var(--surf-3-dark));
+  --bg-txt: hsl(var(--white));
+  --bd-col: hsl(var(--surf-3-dark));
+}
+
+.bg-theme {
+  --bg: hsl(var(--theme));
+  --bg-txt: hsl(var(--white));
+  --bd-col: hsl(var(--theme));
+}
+
+.bg-blue {
+  --bg: hsl(var(--blue));
+  --bg-txt: hsl(var(--white));
+  --bd-col: hsl(var(--blue));
+}
+
+.bg-green {
+  --bg: hsl(var(--green));
+  --bg-txt: hsl(var(--white));
+  --bd-col: hsl(var(--green));
+}
+
+.bg-red {
+  --bg: hsl(var(--red));
+  --bg-txt: hsl(var(--white));
+  --bd-col: hsl(var(--red));
+}
+
+.bg-orange {
+  --bg: hsl(var(--orange));
+  --bg-txt: hsl(var(--black));
+  --bd-col: hsl(var(--orange));
+}

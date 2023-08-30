@@ -1,0 +1,61 @@
+//  ------------------------------------------------------------
+//  Primary, theme and color-scheme variables
+//  ------------------------------------------------------------
+
+:where(html) {
+  --black: 0 0% 0%;
+  --white: 0 0% 100%;
+  --blue-hs: 210 50%;
+  --blue: var(--blue-hs) 30%;
+  --green-hs: 110 50%;
+  --green: var(--green-hs) 25%;
+  --red-hs: 0 68%;
+  --red: var(--red-hs) 36%;
+  --orange-hs: 39 100%;
+  --orange: var(--orange-hs) 65%;
+}
+
+:where(html) {
+  --brand-hs: 9 100%;
+  --brand: var(--brand-hs) 64%;
+  --theme-hs: 215 15%;
+  --theme: var(--theme-hs) 40%;
+  --text-light: var(--theme-hs) 10%;
+  --link-light: var(--blue-hs) 33%;
+  --link-hover-light: var(--brand-hs) 41%;
+  --body-bg-light: var(--theme-hs) 94%;
+  --surf-1-light: var(--theme-hs) 89%;
+  --surf-2-light: var(--theme-hs) 84%;
+  --surf-3-light: var(--theme-hs) 79%;
+  --text-dark: var(--theme-hs) 82%;
+  --link-dark: var(--blue-hs) 75%;
+  --link-hover-dark: var(--brand-hs) 70%;
+  --body-bg-dark: var(--theme-hs) 16%;
+  --surf-1-dark: var(--theme-hs) 21%;
+  --surf-2-dark: var(--theme-hs) 25%;
+  --surf-3-dark: var(--theme-hs) 30%;
+}
+
+:where(html) {
+  color-scheme: light;
+  --text: var(--text-light);
+  --link: var(--link-light);
+  --link-hover: var(--link-hover-light);
+  --body-bg: var(--body-bg-light);
+  --surf-1: var(--surf-1-light);
+  --surf-2: var(--surf-2-light);
+  --surf-3: var(--surf-3-light);  
+  --mode-svg: var(--sun);
+}
+
+:where([data-prefers-dark=true]) {
+  color-scheme: dark;
+  --text: var(--text-dark);
+  --link: var(--link-dark);
+  --link-hover: var(--link-hover-dark);
+  --body-bg: var(--body-bg-dark);
+  --surf-1: var(--surf-1-dark);
+  --surf-2: var(--surf-2-dark);
+  --surf-3: var(--surf-3-dark);  
+  --mode-svg: var(--moon);
+}

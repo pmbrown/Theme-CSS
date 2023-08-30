@@ -1,0 +1,97 @@
+//  ------------------------------------------------------------
+//  Spacing
+//  ------------------------------------------------------------
+
+.mt {
+  --mbs: 1rem;
+  margin-block-start: var(--mbs);
+}
+
+.mb-0 {
+  --mb: 0;
+  margin-block-end: var(--mb);
+}
+
+.mb-xs {
+  --mb: .25rem;
+  margin-block-end: var(--mb);
+}
+
+.mb-sm {
+  --mb: .5rem;
+  margin-block-end: var(--mb);
+}
+
+.mb-md {
+  --mb: .75rem;
+  margin-block-end: var(--mb);
+}
+
+.mb {
+  --mbe: 1rem; 
+  margin-block-end: var(--mbe);
+}
+
+.ml-auto {
+  margin-inline-start: auto;
+}
+
+.mr-auto {
+  margin-inline-end: auto;
+}
+
+.pad-1, .pad-2, .pad-3, .pad-4 {
+  padding-block: var(--pb); 
+  padding-inline: var(--pi);  
+}
+
+.pad-1 {
+  --pb: .25rem; 
+  --pi: .25rem;
+}
+
+.pad-2 {
+  --pb: .5rem; 
+  --pi: .5rem;
+}
+
+.pad-3 {
+  --pb: .75rem;
+  --pi: .75rem; 
+}
+
+.pad-4 {
+  --pb: 1rem; 
+  --pi: 1rem;
+}
+
+.pad-t {
+  --pbs: .5rem;
+  padding-block-start: var(--pbs);
+}
+
+.pad-b {
+  --pbe: .5rem;
+  padding-block-end: var(--pbe);
+}
+
+.pad-block { 
+  --pad-block: 1rem;
+  padding-block: var(--pad-block);
+}
+
+.pad-inline { 
+  --pad-inline: 1rem;
+  padding-inline: var(--pad-inline);
+}
+
+.pad-child {
+  --pb-c: .25rem;
+  --pi-c: .5rem;
+}
+
+.pad-child * {
+  padding-block: var(--pb-c);
+  padding-inline: var(--pi-c);
+}
+

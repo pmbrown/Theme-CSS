@@ -1,0 +1,58 @@
+//  ------------------------------------------------------------
+//  Icons
+//  ------------------------------------------------------------
+
+:where(.ico):before, 
+:where(.ico-b):before, 
+:where(.ico-a):after, 
+:where(.ico-block):before, 
+:where(.ico-block-auto):before {
+  --ico-va: -.115em;
+  display: inline-block;
+  background-color: var(--ico);
+  content: "";
+  width: var(--fs);
+  height: var(--fs);
+  vertical-align: var(--ico-va);
+  mask-image: var(--svg);
+  mask-repeat: no-repeat;
+  -webkit-mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+}
+
+:where(.ico-a):after {
+  --ml: calc(var(--fs) / 5);
+  margin-inline-start: var(--ml);
+}
+
+:where(.ico-b):before {
+  --mr: calc(var(--fs) / 4.75);
+  margin-inline-end: var(--mr);
+}
+
+:where(.ico-block):before {
+  display: block;
+}
+
+:where(.ico-block-auto):before {
+  display: block;
+  margin-inline: auto;
+}
+
+//  ------------------------------------------------------------
+//  Icon variables and classes
+//  ------------------------------------------------------------
+
+@import "icons-svg";
+
+:where(html) { 
+  @each $icons, $value in $icons {
+    --#{$icons}: #{$value};
+  }
+}
+
+@each $icons, $value in $icons {
+.#{$icons} {
+  --svg: var(--#{$icons});        
+  }
+}

@@ -1,0 +1,35 @@
+// Images
+
+.auto, .passport, .landscape, .landscape-sm, .landscape-xs, .portrait {
+  display: grid;
+}
+
+:where(.auto, .passport, .landscape, .landscape-sm, .landscape-xs, .portrait) img {
+  object-fit: cover;
+  aspect-ratio: var(--aspect-ratio);
+  height: 100%;
+}
+
+.auto {
+  --aspect-ratio: auto;
+}
+
+.passport {
+  --aspect-ratio: 1 / 1;
+}
+
+.landscape {
+  --aspect-ratio: 16 / 9;
+}
+
+.landscape-sm {
+  --aspect-ratio: 3 / 1;
+}
+
+.landscape-xs {
+  --aspect-ratio: 4 / 1;
+}
+
+.portrait {
+  --aspect-ratio: 4 / 5;
+}
