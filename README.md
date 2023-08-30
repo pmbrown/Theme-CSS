@@ -1,6 +1,6 @@
 # Theme-CSS.
 
-## Startup styles, variables and utilities for website theme design.
+### Startup styles, variables and utilities for website theme design.
 
 Contains basic startup styles for element-specific HTML, a simple color palette with light and dark mode color-schemes, and optional utility extensions common in website design. The majority of the styles have the following in common:
 
