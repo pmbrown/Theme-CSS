@@ -79,7 +79,7 @@
   font-size: var(--sml);
 }
 
-.card-sm *:is(p, ul, ol, dl):not(:last-child) { 
+.card-sm .card-body *:is(p, ul, ol, dl):not(:last-child) { 
   --mb: .5rem;
 }
 

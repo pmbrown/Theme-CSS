@@ -1481,7 +1481,7 @@ a > :where(code) {
   font-size: var(--sml);
 }
 
-.card-sm *:is(p, ul, ol, dl):not(:last-child) {
+.card-sm .card-body *:is(p, ul, ol, dl):not(:last-child) {
   --mb: .5rem;
 }
 
@@ -1643,6 +1643,14 @@ dialog header [data-close]:before {
 
 .dialog-body :last-child {
   --mb: 0;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  content: "";
 }
 
 :where(html) ::backdrop {

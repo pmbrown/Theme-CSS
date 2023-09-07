@@ -21,6 +21,7 @@ dialog {
   border-color: var(--dialog-border-color);
   border-radius: var(--dialog-border-radius); 
   background-color: var(--dialog-bg); 
+//  z-index: 200;
 }
 
 dialog header {
@@ -84,6 +85,15 @@ dialog header [data-close]:before {
 }
 
 // Backdrop
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  content: "";
+}
+
 :where(html) {
   ::backdrop {
     background: hsla(215 15% 94.5% / .9);
