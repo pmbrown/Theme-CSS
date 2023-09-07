@@ -126,41 +126,34 @@
   --card-title-txt: hsl(var(--white));
   --card-title-bg: hsl(var(--blue));
   --card-border-color: var(--card-title-bg);
-  --link-hover-bg: hsla(var(--blue) / .85);
 }
 
 .card-red {
   --card-title-txt: hsl(var(--white));
   --card-title-bg: hsl(var(--red));
   --card-border-color: var(--card-title-bg);
-  --hover-bg: hsla(var(--red) / .5);
-  --link-hover-bg: hsla(var(--red) / .85);
 }
 
 .card-green {
   --card-title-txt: hsl(var(--white));
   --card-title-bg: hsl(var(--green));
   --card-border-color: var(--card-title-bg);
-  --link-hover-bg: hsla(var(--green) / .85);
 }
 
 .card-orange {
   --card-title-txt: hsl(var(--black));
   --card-title-bg: hsl(var(--orange));
   --card-border-color: var(--card-title-bg);
-  --link-hover-bg: hsla(var(--orange) / .85);
 }
 
 .card-dark {
   --card-title-txt: hsl(var(--white));
   --card-title-bg: hsl(var(--surf-2-dark));
   --card-border-color: var(--card-title-bg);
-  --link-hover-bg: hsl(var(--surf-2-dark));
 }
 
 .card-light {
   --card-title-txt: hsl(var(--black));
   --card-title-bg: hsl(var(--surf-2-light));
   --card-border-color: var(--card-title-bg);
-  --link-hover-bg: hsl(var(--surf-2-light));
 }
