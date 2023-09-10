@@ -1,4 +1,4 @@
-/* 
+/*! 
   Theme CSS - 1.0 (Startup/Extend)
   Copyright 2023 Phil Brown
   Licenced under https://github.com/pmbrown/Theme-CSS/blob/main/LICENSE
@@ -78,8 +78,8 @@
 
 :where(html) {
   --fs: clamp(100%, 50% + 0.666vw, 150%);
-  --body: 0.906rem;
-  --lg: 0.969rem;
+  --body: 0.969rem;
+  --lg: 1.1rem;
   --sm: 0.844rem;
   --sml: 0.797rem;
   --xs: 0.75rem;
@@ -192,7 +192,8 @@
 }
 
 :where(dt) {
-  font-weight: bold;
+  --fw: bold;
+  font-weight: var(--fw);
 }
 
 :where(dd) {
@@ -798,10 +799,16 @@ a > :where(code) {
 }
 
 .skip {
-  position: relative;
+  font-weight: bold;
+  position: fixed;
   display: block;
-  margin-block-start: 0.5rem;
-  padding-inline: 0.5rem;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  border-radius: 0;
+  outline-width: 1px;
+  outline-offset: 0;
+  background-color: hsl(var(--body-bg));
   z-index: 10000;
 }
 
@@ -1780,7 +1787,7 @@ dialog header [data-close]:before {
 }
 
 :where(.bd, .bd-t, .bd-b, .bd-l, .bd-r, .bd-block, .bd-inline, .bd-child *) {
-  --bd-col: hsl(var(--surf-2));
+  --bd-col: hsl(var(--surf-3));
 }
 
 :where(.bd) {

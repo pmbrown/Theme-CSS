@@ -106,10 +106,17 @@
 }
 
 .skip {
-  position: relative;
+  font-weight: bold;
+  position: fixed;
   display: block;
-  margin-block-start: .5rem;
-  padding-inline: .5rem;
+  left: 0;
+  right: 0;
+//  margin-block-start: .5rem;
+  padding: 1rem;
+  border-radius: 0;
+  outline-width: 1px;
+  outline-offset: 0;
+  background-color: hsl(var(--body-bg));
   z-index: 10000;
 }
 

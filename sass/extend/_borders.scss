@@ -1,7 +1,7 @@
 // Border utilities
 
 :where(.bd, .bd-t, .bd-b, .bd-l, .bd-r, .bd-block, .bd-inline, .bd-child *) {
-  --bd-col: hsl(var(--surf-2));
+  --bd-col: hsl(var(--surf-3));
 }
 
 :where(.bd) {

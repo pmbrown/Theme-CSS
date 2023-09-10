@@ -23,8 +23,8 @@
 
 :where(html) { 
   --fs: clamp(100%, 50% + 0.666vw, 150%);
-  --body: 0.906rem;
-  --lg: 0.969rem;
+  --body: 0.969rem;
+  --lg: 1.1rem;
   --sm: 0.844rem;
   --sml: 0.797rem;
   --xs: 0.75rem;
@@ -138,7 +138,8 @@
 }
 
 :where(dt) {
-  font-weight: bold;
+  --fw: bold;
+  font-weight: var(--fw);
 }
 
 :where(dd) {
