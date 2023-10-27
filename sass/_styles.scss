@@ -58,7 +58,7 @@
   text-underline-offset: .1175em;
 }
 
-:where(a:is(:hover, :focus)) {
+:where(a:hover) {
   --ico: var(--hover);
   color: var(--hover);
   text-decoration: none;

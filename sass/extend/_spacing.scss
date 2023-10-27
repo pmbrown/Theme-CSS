@@ -7,6 +7,11 @@
   margin-block-start: var(--mbs);
 }
 
+.mb {
+  --mbe: 1rem; 
+  margin-block-end: var(--mbe);
+}
+
 .mb-0 {
   --mb: 0;
   margin-block-end: var(--mb);
@@ -25,11 +30,6 @@
 .mb-md {
   --mb: .75rem;
   margin-block-end: var(--mb);
-}
-
-.mb {
-  --mbe: 1rem; 
-  margin-block-end: var(--mbe);
 }
 
 .ml-auto {
